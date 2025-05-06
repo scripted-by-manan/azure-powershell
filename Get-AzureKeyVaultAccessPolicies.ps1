@@ -1,3 +1,28 @@
+<#
+.SYNOPSIS
+    Audits Azure Key Vault access policies across multiple subscriptions.
+
+.DESCRIPTION
+    This script authenticates to Azure, loops through a defined list of subscriptions,
+    and identifies all Key Vaults that follow a specific naming convention (e.g., "kv-name-*").
+    For each Key Vault found, it extracts access policies, including key, secret, and certificate permissions.
+    The results are exported to a timestamped Excel file using the ImportExcel module for easy review.
+
+.USE CASES
+    - Security audits and access reviews
+    - RBAC cleanup and policy validation
+    - Gaining visibility into over-provisioned roles
+    - Reporting for compliance or internal governance
+
+.NOTES
+    - Requires Az PowerShell module and ImportExcel module.
+    - Make sure you have sufficient permissions to read Key Vaults and access policies.
+    - Customize the vault name prefix or output file path as needed.
+
+.AUTHOR
+    Manan Shah
+#>
+
 # Install the ImportExcel module if not already installed
 # Install-Module -Name ImportExcel -Scope CurrentUser -Force
 
