@@ -12,10 +12,10 @@
 #   - Ideal for use in DevOps pipelines or CI/CD jobs
 # -----------------------------------------------------------------------------
 
-RESOURCE_GROUP="RG-CMFG-P01-PublicTokenizationService-Application"
-CLUSTER_NAME="AKS-PR1-OmniChannel"
-NAMESPACE="publictokenizationservice"
-DEPLOYMENT_NAME="publictokenizationservice-prod"
+RESOURCE_GROUP="RG-D01-Service-Application"
+CLUSTER_NAME="AKS-DR1-Test"
+NAMESPACE="testapp"
+DEPLOYMENT_NAME="testapp-sandbox"
 
 echo "🔄 Restarting deployment: $DEPLOYMENT_NAME in namespace: $NAMESPACE using SP context..."
 
